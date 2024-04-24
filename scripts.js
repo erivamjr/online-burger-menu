@@ -113,6 +113,7 @@ addressForm.addEventListener('input', (e) => {
 
   const isOpen = checkRestaurantOpen();
   if (!isOpen) {
+    checkoutBtn.disabled = true;
     Toastify({
       text: "Ops o restaurante está fechado! Volte mais tarde!",
       duration: 3000,
@@ -127,7 +128,7 @@ addressForm.addEventListener('input', (e) => {
 
     return;
   }
-
+  checkoutBtn.disabled = false;
   let inputValue = e.target.value;
 
   if (inputValue !== "") {
