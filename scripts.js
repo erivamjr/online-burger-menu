@@ -179,7 +179,7 @@ function checkRestaurantOpen() {
   const date = new Date();
   const hours = date.getHours();
 
-  return hours >= 11 && hours < 22;
+  return hours >= 18 && hours < 22;
 }
 
 const spanItem = document.querySelector('#date-span');
