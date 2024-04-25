@@ -163,13 +163,13 @@ checkoutBtn.addEventListener('click', () => {
   }
 
   const cartItems = cart.map((item) => {
-    return `${item.name} - Qtd: (${item.quantity}) - Preço: R$ ${item.price.toFixed(2)} | `;
+    return `Qtd: (${item.quantity}) - ${item.name} - Preço: R$ ${item.price.toFixed(2)} |\n `;
   }).join("");
 
-  const message = encodeURIComponent(cartItems);
+  const message = encodeURIComponent(`${cartItems}\nTotal: ${total}\nEndereço: ${addressForm.value}`);
   const phone = '5591991782007';
 
-  window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressForm.value}`, '_blank');
+  window.open(`https://wa.me/${phone}?text=${message}\nTotal: ${total}\nEndereço: ${addressForm.value}`, '_blank');
 
   cart = [];
   updateCartModal();
