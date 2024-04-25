@@ -162,11 +162,16 @@ checkoutBtn.addEventListener('click', () => {
     return;
   }
 
+
+
+  let total = 0;
   const cartItems = cart.map((item) => {
-    return `Qtd: (${item.quantity}) - ${item.name} - Preço: R$ ${item.price.toFixed(2)} |\n `;
+    total += item.price * item.quantity;
+    return `${item.quantity} - ${item.name} - R$ ${item.price.toFixed(2)} \n`;
   }).join("");
 
-  const message = encodeURIComponent(`${cartItems}\nTotal: ${total}\nEndereço: ${addressForm.value}`);
+
+  const message = encodeURIComponent(`${cartItems}\nTotal: R$ ${total.toFixed(2)}\n\nEndereço: ${addressForm.value}`);
   const phone = '5591991782007';
 
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
@@ -177,7 +182,7 @@ checkoutBtn.addEventListener('click', () => {
 });
 
 function checkRestaurantOpen() {
-  const date = new Date();
+  //const date = new Date();
   //const hours = date.getHours();
   return true;
   //return hours >= 18 && hours < 22;
