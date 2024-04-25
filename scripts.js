@@ -136,8 +136,6 @@ addressForm.addEventListener('input', (e) => {
     addressWarning.classList.add('hidden');
   }
 
-
-  console.log(cart)
 });
 
 checkoutBtn.addEventListener('click', () => {
