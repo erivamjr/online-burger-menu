@@ -934,6 +934,10 @@ video {
   max-height: 180vh;
 }
 
+.max-h-\[90vh\] {
+  max-height: 90vh;
+}
+
 .min-h-\[80vh\] {
   min-height: 80vh;
 }
