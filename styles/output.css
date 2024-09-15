@@ -750,6 +750,11 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.my-80 {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -784,6 +789,22 @@ video {
 
 .mt-9 {
   margin-top: 2.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-80 {
+  margin-top: 20rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .box-border {
@@ -903,6 +924,18 @@ video {
 
 .max-h-\[80vh\] {
   max-height: 80vh;
+}
+
+.max-h-\[50vh\] {
+  max-height: 50vh;
+}
+
+.max-h-\[180vh\] {
+  max-height: 180vh;
+}
+
+.min-h-\[80vh\] {
+  min-height: 80vh;
 }
 
 .w-28 {
