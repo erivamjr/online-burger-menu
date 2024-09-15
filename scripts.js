@@ -183,7 +183,7 @@ checkoutBtn.addEventListener('click', () => {
 
 
   const message = encodeURIComponent(`Pedido...😋😋😋\n\n${cartItems}\n💸Total: R$ ${total.toFixed(2)} 💸\nEndereço: ${addressForm.value} \n\n Agora é só fazer o pix: \n\n 91 9 8193 4310`);
-  const phone = '5591991782007';
+  const phone = '5591981934310';
 
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
 
