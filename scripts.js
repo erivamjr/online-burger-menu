@@ -182,7 +182,7 @@ checkoutBtn.addEventListener('click', () => {
   }).join("");
 
 
-  const message = encodeURIComponent(`Pedido...😋😋😋\n\n${cartItems}\n💸Total: R$ ${total.toFixed(2)} 💸\n\nEndereço: ${addressForm.value}`);
+  const message = encodeURIComponent(`Pedido...😋😋😋\n\n${cartItems}\n💸Total: R$ ${total.toFixed(2)} 💸\n\nEndereço: ${addressForm.value} \n\n Agora é só fazer o pix: \n\n 91 9 8193 4310`);
   const phone = '5591991782007';
 
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
@@ -193,10 +193,16 @@ checkoutBtn.addEventListener('click', () => {
 });
 
 function checkRestaurantOpen() {
-  //const date = new Date();
-  //const hours = date.getHours();
+  // const date = new Date();
+  // const hours = date.getHours();
+  // const day = date.getDay();
+
+  // const isValidDay = day >= 3 || day === 0; 
+
+  // const isValidHour = hours >= 18 && hours < 22;
+
+  // return isValidDay && isValidHour;
   return true;
-  //return hours >= 18 && hours < 22;
 }
 
 const spanItem = document.querySelector('#date-span');
