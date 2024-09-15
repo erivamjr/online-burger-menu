@@ -7,7 +7,7 @@ module.exports = {
         'sans': ['Roboto', 'sans-serif'],
       },
       backgroundImage: {
-        'home': "url('/assets/bg.png')"
+        'home': "url('/assets/bg3.png')"
       },
     },
   },
