@@ -8,6 +8,7 @@ const cartClose = document.querySelector('#close-modal-btn');
 const cartCounter = document.querySelector('#cart-counter');
 const addressForm = document.querySelector('#address');
 const addressWarning = document.querySelector('#address-warn');
+const footer = document.querySelector('footer')
 
 let cart = [];
 
@@ -98,6 +99,14 @@ function updateCartModal() {
     style: 'currency',
     currency: 'BRL'
   });
+
+  if(cart.length > 0){
+    footer.classList.remove('bg-orange-500');
+    footer.classList.add('bg-gray-900');
+  } else {
+    footer.classList.remove('bg-gray-900');
+    footer.classList.add('bg-orange-500');
+  }
 
   cartCounter.innerHTML = cart.length;
 
@@ -193,16 +202,17 @@ checkoutBtn.addEventListener('click', () => {
 });
 
 function checkRestaurantOpen() {
-  // const date = new Date();
-  // const hours = date.getHours();
-  // const day = date.getDay();
+  const date = new Date();
+  const hours = date.getHours();
+  const day = date.getDay();
 
-  // const isValidDay = day >= 3 || day === 0; 
+  // const isValidDay = day >= 3 || day === 0;
+  const isValidDay = day >= 3; 
 
-  // const isValidHour = hours >= 18 && hours < 22;
+  const isValidHour = hours >= 18 && hours < 22;
 
-  // return isValidDay && isValidHour;
-  return true;
+  return isValidDay && isValidHour;
+  // return true;
 }
 
 const spanItem = document.querySelector('#date-span');
