@@ -209,7 +209,7 @@ function checkRestaurantOpen() {
   // const isValidDay = day >= 3 || day === 0;
   const isValidDay = day >= 3; 
 
-  const isValidHour = hours >= 18 && hours < 22;
+  const isValidHour = hours >= 18 && hours < 24;
 
   return isValidDay && isValidHour;
   // return true;
